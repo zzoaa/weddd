@@ -7,7 +7,7 @@ module.exports = {
         username: 'hagunbiz',
         password: 'gkrns!@#',
         port: 3306,
-        database: 'botem37'
+        database: 'db'
     },
     cors: {
         origin: true,
@@ -23,7 +23,7 @@ module.exports = {
         emailPassword: 'yeaq secu qimk yocu'
     },
     imp: {
-        key: '8683603356345818',
-        secret: 'qSHOA0Ruyd3gYtt8SFTvmQupIefJPBzCsNcjrIELESYkdm7WTkU51fZpDWam658sqSN5k36Egpv1l39h'
+        key: '',
+        secret: ''
     }
 }

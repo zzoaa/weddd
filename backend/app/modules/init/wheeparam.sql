@@ -189,7 +189,7 @@ CREATE TABLE `wb_config` (
   `cfg_key` varchar(30) NOT NULL,
   `cfg_value` text NOT NULL,
   PRIMARY KEY (`cfg_key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 insert into `wb_config`(`cfg_key`, `cfg_value`)
@@ -1492,7 +1492,7 @@ CREATE TABLE `wb_survey_pill` (
   `pill_img_before` varchar(255) DEFAULT NULL COMMENT '클릭 전 이미지',
   `pill_img_after` varchar(255) DEFAULT NULL COMMENT '클릭 후 이미지',
   PRIMARY KEY (`pill_idx`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 DROP TABLE IF EXISTS `wb_survey_quest`;
@@ -1550,8 +1550,6 @@ CREATE TABLE `wb_survey_result` (
   `reg_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`result_idx`)
 ) ENGINE=InnoDB AUTO_INCREMENT=196 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-
 
 
 DROP TABLE IF EXISTS `wb_uniqid`;
