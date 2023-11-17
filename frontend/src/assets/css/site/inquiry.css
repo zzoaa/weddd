@@ -1,0 +1,44 @@
+.inquiry-list {
+  position: relative;
+}
+
+.inquiry-list .title {
+  font-size: 18px;
+}
+
+.inquiry-list .DefaultModal-inner table.inquiry_result_table {
+  width: calc(500px - 32px);
+
+}
+
+.inquiry-list .DefaultModal-inner table.inquiry_result_table .input-textarea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+
+}
+.inquiry_result_table th,
+.inquiry_result_table td{
+  padding: 5px 0;
+}
+.inquiry_result_table .W100 {
+  width: 100%;
+}
+.inquiry-table .ready {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: royalblue;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inquiry-table .success {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #39bea7;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

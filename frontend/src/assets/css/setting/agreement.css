@@ -1,0 +1,33 @@
+.agreement-section {
+  position: relative;
+}
+.agreement-section .agreement-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.agreement-section .title-box {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.agreement-section .title-box .title {
+  margin-right: 100px;
+  font-size: 18px;
+
+}
+.agreement-section .title-box .btn {
+  padding: 5px;
+  border-radius: 5px;
+}
+.agreement-section .title-box .btn:hover {
+  background-color: #464646;
+  color: #fff;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  height: 500px;
+}

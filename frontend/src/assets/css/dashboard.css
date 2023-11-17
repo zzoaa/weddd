@@ -1,0 +1,72 @@
+.dash-board {
+  position: relative;
+  width: 100%;
+  min-width: 1400px;
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  padding: 16px;
+}
+.dash-board .header {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid #e6e6e6;
+  color: var(--bs-black);
+  background-color: #ede9f6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  z-index: 100;
+}
+.dash-board .header .nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.dash-board .logo-warp {
+  height: 100%;
+  padding: 5px 20px;
+  overflow: hidden;
+}
+.dash-board .header .logo-warp > img {
+  height: 100%;
+  object-fit: contain;
+  display: inline-flex;
+}
+
+.dash-section {
+  height: 800px;
+  padding: 40px 40px;
+  display: flex;
+}
+.dash-section .chart-wrap {
+  width: 70%;
+  height: 100%;
+}
+.dash-section .user-table {
+  width: 30%;
+  height: fit-content;
+}
+.dash-section .user-table .table-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+table {
+  width: 100%;
+  border: 1px solid #d8d8d8;
+}
+.dash-section table th {
+  padding: 5px 0;
+  text-align: center;
+  background-color: #fbfbfb;
+  border-right: 1px solid #d8d8d8;
+}
+.dash-section table tr {
+  border: 1px solid #d8d8d8;
+
+}
+.dash-section table td {
+  border-right: 1px solid #d8d8d8;
+  text-align: center;
+}

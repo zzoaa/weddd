@@ -1,0 +1,47 @@
+.order-list {
+  position: relative;
+  min-width: 1800px;
+  margin: 0 auto;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.order-list .red {
+  color: red;
+}
+.order-list-section .title{
+  width: calc(100%);
+  padding: 10px 0;
+  font-size: 18px;
+  margin: 1rem auto;
+  border-bottom: 1px solid #e6e6e6;
+}
+.order-list-section .btn-wrap {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.order-list-table .checkbox {
+  width: 16px;
+  height: 16px;
+}
+.order-list-table .list-th{
+  padding:5px 2px;
+  background-color: var(--bs-admin-bg-color);
+  border-right: 1px solid var(--bs-admin-border-color);
+}
+
+.order-list-table .list-td {
+  padding:5px 2px;
+
+  border-right: 1px solid var(--bs-admin-border-color);
+}
+.order-list-table span.on {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #0d6efd;
+}

@@ -1,0 +1,46 @@
+.healthEdit-table th {
+  padding: 10px 0;
+}
+
+.healthEdit-table .table-wrap {
+  padding: 10px;
+  height: 300px;
+}
+.healthEdit-table .table-wrap .table-text{
+  height: 100%;
+}
+.table-text .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  height: calc(100% - 45px);
+}
+.healthEdit-table .w200 {
+  width: 100px;
+}
+
+.healthInfoEdit-section .btn-wrap {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.healthInfoEdit-section .H20 {
+  height: 20px;
+}
+.healthInfoEdit-section .P10 {
+  padding: 10px;
+}
+.healthInfoEdit-section .v-top {
+  vertical-align: top;
+}
+.healthInfoEdit-section .inflex-col {
+  display: inline-flex;
+  flex-direction: column;
+}
+.healthInfoEdit-section label {
+  display: flex;
+  align-items: center;
+}
+.healthInfoEdit-section label > input[type="checkbox"] {
+  margin-right:10px;
+}
+

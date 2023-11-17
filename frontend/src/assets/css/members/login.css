@@ -1,0 +1,57 @@
+.form-warp {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bs-gray-900);
+  color: var(--bs-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-warp .form {
+  width: 300px;
+  height: 300px;
+  padding: 16px;
+  background: linear-gradient(to top, var(--bs-gray), var(--bs-gray-dark));
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(244,244,244,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-warp .form label {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.form-warp .form label > span {
+  width: 20%;
+}
+.form-warp .form label > input {
+  width: 80%;
+  padding: 5px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #e6e6e6;
+}
+.form-warp .form label > input::placeholder {
+  color: #fff;
+}
+.form-warp .form label > input:focus {
+  outline: none;
+  border-color: var(--bs-blue);
+
+}
+.form-warp button {
+  padding: 5px;
+
+  transition: .4s ease;
+}
+.form-warp button:hover {
+  background-color: var(--bs-gray-400);
+  color: var(--bs-black);
+  font-weight: bold;
+}

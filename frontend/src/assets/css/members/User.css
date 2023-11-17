@@ -1,0 +1,121 @@
+.user-list {
+  position: relative;
+}
+.user-list table th {
+  padding: 7px 0;
+}
+.user-list table td {
+  padding: 5px 0;
+}
+
+/*
+유저 상세 페이지 : 시작
+ */
+.user-list .DefaultModal-inner table.userEdit-table {
+  width: calc(70vw - 70px);
+  font-size: 14px;
+
+}
+.user-list .DefaultModal-inner table.userEdit-table td {
+  padding: 0 20px;
+  text-align: left;
+  font-weight: normal;
+}
+.user-list .DefaultModal-inner table.userEdit-table button {
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/**
+배송지 관리 스타일 : 시작
+ */
+.user-list .addressList-title {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+
+}
+.user-list .addressList-title .btn {
+  margin-left: 100px;
+  font-size: 14px;
+  border-color: royalblue;
+}
+.user-list .addressList-table tr {
+  border-bottom : 1px solid var(--bs-admin-border-color);
+}
+.user-list .addressList-table td{
+  padding: 5px;
+
+}
+.user-list .addressList-table .btn-wrap {
+  margin-left: 20px;
+  display: inline-flex;
+  width: unset;
+}
+.user-list .addressList-table input {
+  width: 100%;
+}
+.user-list .btn-wrap {
+  width: 100%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+
+
+}
+.user-list .btn-wrap.mt20 {
+  margin-top: 20px;
+}
+.user-list .btn-wrap .btn.success {
+
+  background-color: #beceff;
+
+}
+.user-list .btn-wrap .btn.success.w150 {
+  width: 150px;
+}
+.DefaultModal-outter .DefaultModal-inner .children table.addressList-table {
+  width: 100%;
+}
+/**
+배송지 관리 스타일 : 끝
+ */
+/**
+비밀번호 관리 스타일 : 시작
+ */
+.user-list .passEdit-table {
+  border: none;
+}
+
+/**
+등급 관리
+ */
+.lev_modal {
+  font-size: 14px;
+}
+
+/*8쿠폰 관리
+
+ */
+.user-list .pagination {
+  width: 100%;
+  display: flex;
+}
+.user-list .pagination > span {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+  font-size: 14px;
+  border-radius: 50%;
+  border: 1px solid #e6e6e6;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.user-list .pagination > span.on {
+  border-color: var(--bs-primary)
+}

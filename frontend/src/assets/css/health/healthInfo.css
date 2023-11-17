@@ -1,0 +1,97 @@
+.health-info {
+  width: 100%;
+}
+.health-info .title {
+  font-size: 18px;
+  line-height: 1;
+  margin-right: 100px;
+}
+.health-info .button-wrap {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.health-info .info-add {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #464646;
+  border-radius: 5px;
+}
+.health-info .info-add:hover {
+  background-color: #464646;
+  color: #fff;
+}
+.health-info .info-container {
+  width: 20%;
+  display: inline-flex;
+  flex-direction: column;
+}
+.health-info .__info-item {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e6e6e6;
+  border-bottom: none;
+  cursor: pointer;
+}
+.health-info .__info-item:last-child {
+  border-bottom: 1px solid #e6e6e6;
+}
+.health-info .__info-item:first-child {
+  border: none;
+  background-color: #464646;
+  color: #fff;
+  cursor: auto;
+}
+.health-info .__info-item .item-text {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  display: block;
+  line-height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.health-info .__info-item .item-text .img-wrap {
+  display: inline-block;
+  height: 100%;
+
+}
+.health-info .__info-item .item-text .img-wrap > img {
+  height: 100%;
+  object-fit: contain;
+}
+.health-info .__info-item.on {
+  border: 2px solid #6978FF;
+}
+.health-info .__info-item .icon {
+  position: absolute;
+  right: 10px;
+  z-index: -1;
+}
+.health-info .__info-item .btn {
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 0;
+}
+.health-info .__info-item .edit-btn {
+  right: 10px;
+}
+.health-info .__info-item .info-btn {
+  right: 90px;
+}
+.health-info .__info-item .del-btn {
+  right: 50px;
+}
+.health-info .__info-item .btn:hover {
+  background-color: #464646;
+  color: #fff;
+}

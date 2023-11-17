@@ -1,0 +1,124 @@
+.setting_section{
+  position: relative;
+}
+.setting_section .w100 {
+  width: 100%;
+}
+.setting_section input {
+  padding: 5px;
+}
+.setting_section .text-center {
+  text-align: center;
+}
+
+.setting_section .setting_title {
+  padding: 10px 0;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/**
+포트원 설정
+ */
+.setting_section .shop_setting_form {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.setting_section .shop_setting_form .shop_setting_table {
+  margin-bottom: 20px;
+}
+.setting_section .shop_setting_form tr {
+  border-bottom: 1px solid var(--bs-admin-border-color)
+}
+.setting_section .shop_setting_form th {
+  width: 200px;
+  padding: 5px;
+  background-color: var(--bs-admin-bg-color);
+  border-right: 1px solid var(--bs-admin-border-color);
+}
+.setting_section .shop_setting_form td {
+  padding: 5px;
+}
+.setting_section .company_article {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+.setting_section .company_form{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.setting_section .company_form .company_title {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+
+  border: 1px solid var(--bs-admin-border-color);
+  background-color: var(--bs-admin-bg-color);
+}
+.setting_section .company_form .form-group {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid var(--bs-admin-border-color);
+}
+.setting_section .company_form .form-label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--bs-admin-border-color);
+}
+.setting_section .company_form .form-label.privacy {
+  width: 50%;
+  display: inline-flex;
+}
+.setting_section .company_form .form-label .form-name {
+  width: 15%;
+  height: 40px;
+  padding-left: 1rem;
+  font-size: 13px;
+  margin-right: 20px;
+  background-color: var(--bs-admin-bg-color);
+
+  display: flex;
+
+  align-items: center;
+}
+.setting_section .company_form .form-label .form-input {
+  width: calc(85% - 40px);
+  padding: 2px 16px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.setting_section .company_form .form-label:nth-child(2n){
+  border-top: none;
+  border-bottom: none;
+}
+.setting_section .company_form .form-label.privacy {
+  border: none;
+  border-left: 1px solid var(--bs-admin-border-color);
+  border-top: 1px solid var(--bs-admin-border-color);
+}
+.setting_section .company_form .form-label.privacy.br1 {
+  border-right: 1px solid var(--bs-admin-border-color);
+}
+.setting_section .company_form .form-label.privacy .form-name {
+  width: 30%;
+}
+.setting_section .company_form .form-label.privacy .form-input {
+  width: calc(70% - 40px);
+}
+.setting_section .company_form .btn {
+  margin-top: 20px;
+  border-color: var(--bs-admin-border-color);
+}

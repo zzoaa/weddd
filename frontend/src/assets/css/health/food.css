@@ -1,0 +1,36 @@
+.food_table .btn-wrap > a{
+  margin-right: 10px;
+
+}
+.food_table .btn-wrap > svg{
+  cursor: pointer;
+}
+
+.food_form_section .flex {
+  display: flex;
+}
+.food_form_section .jcc {
+  justify-content: center;
+}
+.food_form_section .p10 {
+  padding:10px;
+}
+.food_form_section .img-wrap {
+  height: 100px;
+}
+.food_form_section .img-wrap > img {
+  height: 100%;
+  object-fit: contain;
+}
+.food_form_section .trash-btn {
+  color: red;
+  border-color: red;
+  margin: 0 10px;
+}
+.food_section .img-wrap {
+  height: 80px;
+}
+.food_section .img-wrap > img {
+  height: 100%;
+  object-fit: contain;
+}

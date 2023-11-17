@@ -1,0 +1,77 @@
+.consult-list th,
+.consult-list td{
+    padding: 5px 0;
+}
+.consult-list .W100 {
+    width: 100%;
+}
+.consult-list .ready {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: royalblue;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.consult-list .success {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #39bea7;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.consult-list .btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.consult-list button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.consult-list .del-btn {
+    height: 100%;
+    color: red;
+}
+.consult-list tr > td:nth-child(2) {
+    width: 200px;
+
+}
+.consult-list tr > td:nth-child(2) .cst_title {
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.consult-list tr > td:nth-child(3) {
+    width: 500px;
+}
+.consult-list tr > td:nth-child(3) .cst_content {
+    width: 100%;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.consult-result .img-wrap {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.consult-result .img-wrap .img-box {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.consult-result .img-wrap .img-box > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

@@ -1,0 +1,24 @@
+.func_food_table .btn-wrap > a{
+  margin-right: 10px;
+
+}
+.func_food_table .btn-wrap > svg{
+  cursor: pointer;
+}
+
+.func_food_form_section .flex {
+  display: flex;
+}
+.func_food_form_section .jcc {
+  justify-content: center;
+}
+.func_food_form_section .p10 {
+  padding:10px;
+}
+.func_food_section .img-wrap {
+  height: 80px;
+}
+.func_food_section .img-wrap > img {
+  height: 100%;
+  object-fit: contain;
+}

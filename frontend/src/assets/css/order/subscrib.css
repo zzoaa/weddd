@@ -1,0 +1,19 @@
+.subscrib-section {
+  position: relative;
+}
+
+.subscrib-section .title {
+  padding: 10px 0;
+  font-size: 18px;
+  margin: 1rem auto;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.subscrib-section .list-th {
+  background-color: var(--bs-admin-bg-color);
+  border-right: 1px solid var(--bs-admin-border-color);
+}
+.subscrib-section .list-td {
+
+  border-right: 1px solid var(--bs-admin-border-color);
+}

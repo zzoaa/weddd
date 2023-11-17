@@ -1,0 +1,122 @@
+.delivery-section {
+  position: relative;
+  font-size: 13px;
+}
+
+.delivery-section .delivery-title {
+  padding: 10px 0;
+  font-size: 18px;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.delivery-section .form_label {
+  position: relative;
+  padding: 5px;
+  border: 1px solid #e6e6e6;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+}
+
+.delivery-section .form_label .label_name {
+  width: 150px;
+  font-weight: bold;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.delivery-section .form_label .label_name::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: calc(100% - 157px);
+  background-color: #fbfbfb;
+  display: block;
+  border-right: 1px solid #d8d8d8;
+  z-index: -1;
+
+}
+.delivery-section .form_label > select {
+  padding: 5px;
+
+}
+.delivery-section .form_label .cost_price {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d8d8d8;
+  border-right: none;
+}
+.delivery-section .form_label .cost_price .title,
+.delivery-section .form_label .cost_cost .title{
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #d8d8d8;
+}
+.delivery-section .form_label .cost_cost {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d8d8d8;
+}
+.delivery-section .form_label .price_table {
+  padding: 10px;
+
+}
+.delivery-section .form_label .price_table > input {
+  margin-right: 5px;
+}
+.delivery-section .form_label input {
+  padding: 2px 5px;
+}
+.delivery-section .form_label textarea {
+  width: calc(100% - 150px);
+  height: 200px;
+  padding: 5px 10px;
+  resize: none;
+
+}
+.delivery-section .shop_delivery_cost .form_label {
+  flex-wrap: wrap;
+}
+.delivery-section .shop_delivery_cost .add_cost {
+  width: 100%;
+  padding: 10px 10px 10px 160px;
+  display: flex;
+
+}
+.delivery-section .shop_delivery_cost .add_cost > button {
+  width: 150px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  box-shadow: 1px 1px 2px #464646;
+}
+.delivery-section .shop_delivery_cost .add_cost > button:hover {
+  background-color: #f8f8f8;
+  box-shadow: 1px 1px 5px #464646;
+}
+.delivery-section .shop_delivery_cost .add_cost .cost_dec {
+  font-size: 13px;
+  color: #646464;
+}
+.delivery-section .delivery-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.delivery-section .delivery-btn:hover {
+  background-color: #4541c9;
+}

@@ -1,0 +1,150 @@
+.banner-section {
+  position: relative;
+}
+.banner-section .title {
+  font-size: 18px;
+  padding: 10px 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.banner-section th .btn {
+  margin-left: 16px;
+  border-color: royalblue;
+}
+.banner-section th .btn:hover {
+  background-color: #464646;
+  color: #fff;
+}
+.banner-section .banner-inner {
+  display: flex;
+}
+.banner-table {
+  width: 500px;
+
+}
+.banner-table thead {
+  background-color: #efefef;
+  border: 1px solid #d8d8d8;
+  text-align: center;
+}
+.banner-table thead th:first-child {
+  width: 80%;
+  border-right: 1px solid #d8d8d8;
+}
+.banner-table tbody {
+  border: 1px solid #d8d8d8;
+  text-align: center;
+}
+
+
+.banner-table tbody td {
+  padding: 10px;
+}
+.banner-table tbody td:first-child {
+  border-right: 1px solid #d8d8d8;
+}
+.banner-table .bannergroup-name {
+  color: #0a58ca;
+  cursor: pointer;
+}
+
+.banner-section .btn {
+  margin-right: 16px;
+  padding: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-section .btn.del {
+  background-color: red;
+  color: white;
+}
+.banner-section .btn:last-child {
+  margin-right: 0;
+}
+.banner-section .banneritem-table {
+  position: absolute;
+  left: 550px;
+  width: 700px;
+  text-align: center;
+}
+.banner-section .banneritem-table thead{
+  background-color: #efefef;
+  border: 1px solid #d8d8d8;
+  text-align: center;
+}
+.banner-section .banneritem-table tbody {
+  border: 1px solid #d8d8d8;
+}
+.banneritem-table tbody tr {
+
+  border-bottom: 1px solid #d8d8d8;
+}
+.banner-section .banneritem-table thead th:nth-child(1) {
+  width: 40%;
+  border-right: 1px solid #d8d8d8;
+}
+.banner-section .banneritem-table thead th:nth-child(2) {
+  width: 40%;
+  border-right: 1px solid #d8d8d8;
+}
+.banner-section .banneritem-table thead th:nth-child(3) {
+  width: 20%;
+}
+.banner-section .banneritem-table td {
+  border-right: 1px solid #d8d8d8;
+}
+.banner-section .banneritem-table td:last-child {
+  border-right: none;
+}
+.banner-section .banneritem-table td .img-wrap {
+  height: 100%;
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.banner-section .banneritem-table td .img-wrap > img {
+  width: 100%;
+  padding: 10px 0;
+
+  object-fit: contain;
+
+}
+
+/**
+배너 아이템 상세 내역 모달
+ */
+.banner-edit01-t {
+  width: 100%;
+  margin-top: 16px;
+  font-size: 14px;
+}
+.banner-edit01-t tr {
+  border: 1px solid #d8d8d8;
+}
+.banner-edit01-t tr th {
+  width: 20%;
+  padding: 5px;
+  text-align: center;
+  border-right: 1px solid #d8d8d8;
+  background-color: #efefef;
+}
+.banner-edit01-t tr td {
+  width: 80%;
+  padding: 5px;
+  font-weight: normal;
+}
+.banner-edit01-t .banner-img > img{
+  width: 50px;
+  aspect-ratio: 1/1;
+  display: inline-flex;
+}
+.banner-edit01-t .banner-img .sub_text {
+  font-weight: normal;
+  font-size: 12px;
+  color: #989898;
+}
+.banner-edit01-t tr td > input {
+  width: 100%;
+}

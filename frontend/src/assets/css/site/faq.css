@@ -1,0 +1,91 @@
+.faq-list-section {
+  position: relative;
+  font-size: 15px;
+}
+.faq-list-section .title {
+  padding: 16px 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.faq-list-section .inner {
+  display: block;
+}
+.faq-list-section table {
+  display: inline-table;
+  width: calc(50% - 5px);
+  margin-right: 10px;
+}
+.faq-list-section table .flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.faq-list-section table .flex .add {
+  font-size: 20px;
+  cursor: pointer;
+}
+.faq-list-section table:last-child {
+  margin: 0;
+}
+.faq-list-section table tr {
+  border-bottom: 1px solid var(--bs-admin-border-color);
+}
+.faq-list-section table tr.on {
+    outline: 1px solid var(--bs-primary);
+}
+.faq-list-section table th,
+.faq-list-section table td {
+  padding: 5px 10px;
+  border-right: 1px solid var(--bs-admin-border-color);
+}
+.faq-list-section table th:last-child {
+  border-right: none;
+}
+.faq-list-section table th {
+  background-color: var(--bs-admin-bg-color);
+}
+.faq-list-section table td div > svg {
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.faq-list-section table td div > svg:last-child {
+  margin: 0;
+}
+/**
+faq 상세내역 시작
+ */
+.faq-list-section table.faqdetail-table th:nth-child(1){
+  width: 35%;
+}
+.faq-list-section table.faqdetail-table th:nth-child(2) {
+  width: 50%;
+}
+/**
+faq 상세내역 끝
+
+ */
+/**
+모달 인풋 스타일링
+ */
+.faq-list-section input {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  border: 1px solid var(--bs-admin-border-color);
+}
+.faq-list-section textarea {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  border: 1px solid var(--bs-admin-border-color);
+  resize: none;
+}
+.faq-list-section input[readonly] {
+  background-color: #e6e6e6;
+  pointer-events: none;
+}
+/**
+모달 인풋 스타일링
+ */

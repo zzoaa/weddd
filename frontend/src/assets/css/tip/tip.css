@@ -1,0 +1,83 @@
+.tip-list-section {
+  position: relative;
+}
+.tip-list-section .title,
+.tip-edit-section .title
+{
+  font-size: 18px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip-list-section .btn-wrap {
+
+
+
+}
+.tip-list-section .tip-table .img-wrap {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.tip-list-section .tip-table .img-wrap > img {
+  width: 100%;
+  object-fit: contain;
+}
+.tip-list-section .tip-table .list-link {
+  padding: 20px;
+  color : var(--bs-primary);
+  display: inline-block;
+}
+.tip-list-section .MuiTableCell-root {
+  border-right: 1px solid var(--bs-admin-border-color);
+}
+
+/*
+건강팁 상세 페이지
+*/
+.tip-edit-section .edit-th {
+  width: 200px;
+  border-right: 1px solid var(--bs-admin-border-color);
+}
+.tip-edit-section .img-wrap {
+  width: 300px;
+  overflow: hidden;
+}
+.tip-edit-section .img-wrap > img {
+  width: 100%;
+  object-fit: contain;
+}
+.tip-edit-section > .btn-wrap {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.tip-edit-section .ox_content {
+  width: 100%;
+  height: 300px;
+  padding: 16px;
+  resize: none;
+}
+
+/*건강팁 쿠폰 모달창*/
+.tip-edit-section .coupon-pagination {
+  margin-top: 20px;
+  display: flex;
+  font-size: 14px;
+}
+.tip-edit-section .coupon-pagination .coupon-page {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.tip-edit-section .coupon-pagination .coupon-page.active {
+  border: 1px solid #0d6efd;
+  border-radius: 50%;
+}
