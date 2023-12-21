@@ -74,7 +74,7 @@ CREATE TABLE `wb_banner_group` (
 
 
 DROP TABLE IF EXISTS `wb_board`;
-REATE TABLE `wb_board` (
+CREATE TABLE `wb_board` (
   `brd_key` varchar(20) NOT NULL DEFAULT '',
   `brd_type` enum('list','gallery','webzine') NOT NULL DEFAULT 'list',
   `brd_title` varchar(30) NOT NULL DEFAULT '',
@@ -1381,7 +1381,7 @@ CREATE TABLE `wb_shop_order_address` (
 ) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
-DROP TABLE IF EXISTS `wb_shop_order_address`;
+DROP TABLE IF EXISTS `wb_shop_subscribe`;
 CREATE TABLE `wb_shop_subscribe` (
   `sub_idx` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'PK',
   `prd_idxs` varchar(100) NOT NULL DEFAULT '[]' COMMENT '연관된 prd_idx의 배열',
@@ -1559,9 +1559,6 @@ Create Table `wb_uniqid`
     `uq_ip` int(10) unsigned NOT NULL,
     PRIMARY KEY (`uq_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-----------------------------------------------------------------------------
 
 DROP TABLE IF EXISTS `wb_contact`;
 CREATE TABLE `wb_contact`
