@@ -9,7 +9,7 @@ CREATE TABLE `wb_basic` (
                             `reg_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '글 작성일시',
                             `exp_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '글 삭제일시',
                             PRIMARY KEY (`idx`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 CREATE TABLE `wb_attach` (

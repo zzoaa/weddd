@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     } catch (err) {
         console.error('디렉토리 생성 중 에러 발생:', err);
     }
-    cb(null, dir);
+    db(null, dir);
 
     try {
         // 트랜잭션 시작

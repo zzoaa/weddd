@@ -7,7 +7,7 @@ module.exports = {
         username: 'hagunbiz',
         password: 'gkrns!@#',
         port: 3306,
-        database: 'botem37'
+        database: 'node_board'
     },
     cors: {
         origin: true,
