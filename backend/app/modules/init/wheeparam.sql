@@ -1,4 +1,17 @@
 DROP TABLE IF EXISTS `wb_attach`;
+
+CREATE TABLE `wb_basic` (
+                            `idx` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+                            `writer` varchar(20) NOT NULL DEFAULT '' COMMENT '작성자명',
+                            `title` varchar(100) NOT NULL DEFAULT '' COMMENT '글 제목',
+                            `content` mediumtext DEFAULT NULL COMMENT '글 내용',
+                            `status` enum('Y','N') NOT NULL DEFAULT 'Y' COMMENT '글 상태(Y:공개 / N:삭제)',
+                            `reg_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '글 작성일시',
+                            `exp_datetime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '글 삭제일시',
+                            PRIMARY KEY (`idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+
+
 CREATE TABLE `wb_attach` (
   `att_idx` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `att_target_type` varchar(50) NOT NULL DEFAULT 'ETC',
