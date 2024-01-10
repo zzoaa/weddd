@@ -5,7 +5,6 @@ currentDateTime.setHours(currentDateTime.getHours() + 9);
 
 // 공지 작성하기(쓰기)v
 basicModel.submitPost = async (writer, title, content) => {
-    const db = database();
     let postId = null;
 
     await db('wb_basic').insert({
@@ -13,7 +12,8 @@ basicModel.submitPost = async (writer, title, content) => {
         title: title,
         content: content,
         status: 'Y',
-        reg_datetime: currentDateTime
+        reg_datetime: currentDateTime,
+        upd_datetime: currentDateTime
     })
     .then((newId) => {
         postId = newId;
@@ -27,7 +27,6 @@ basicModel.submitPost = async (writer, title, content) => {
 };
 //게시글 목록을 불러오기
 basicModel.getPosts = async (page=0) => {
-    const db = database();
     let postlist = null;
 
     await db
@@ -47,7 +46,6 @@ basicModel.getPosts = async (page=0) => {
 
 //게시글 상세 불러오기
 basicModel.getPostById = async (idx) => {
-    const db = database();
     let postById = null;
 
     await db
@@ -65,5 +63,25 @@ basicModel.getPostById = async (idx) => {
         });
     return postById;
 };
+
+//게시글 수정하기
+basicModel.updatePost = async (postData) => {
+    await db('wb_basic')
+        .where('idx', postData.idx)
+        .andWhere('status', 'Y')
+        .update({
+            writer: postData.writer,
+            title: postData.title,
+            content: postData.content,
+            upd_datetime: currentDateTime
+        })
+        .catch((e) => {
+            console.log(e);
+            return null;
+        });
+
+    // 업데이트된 내용(id와 title)을 반환합니다.
+    return await basicModel.getPostById(postData.idx); // 또는 필요에 따라 업데이트된 내용 반환
+}
 
 module.exports = basicModel;
