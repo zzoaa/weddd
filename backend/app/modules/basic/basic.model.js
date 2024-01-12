@@ -84,4 +84,20 @@ basicModel.updatePost = async (postData) => {
     return await basicModel.getPostById(postData.idx); // 또는 필요에 따라 업데이트된 내용 반환
 }
 
+//게시글 삭제하기
+basicModel.deletePost = async (idx) => {
+    await db('wb_basic')
+        .where('idx', idx)
+        .andWhere('status', 'Y')
+        .update({
+            status: 'N',
+            exp_datetime: currentDateTime
+        })
+        .catch((e) => {
+            console.log(e);
+            return false;
+        });
+
+    return true; // 또는 필요에 따라 업데이트된 내용 반환
+}
 module.exports = basicModel;

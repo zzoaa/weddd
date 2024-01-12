@@ -91,6 +91,30 @@ basicController.updatePost = async(req, res) => {
     }
 };
 
+//게시글 삭제하기
+basicController.deletePost = async(req, res) => {
+    try {
+        const deleteIdxsList = req.body.idxs;
+
+        if (deleteIdxsList.length === 0) {
+            return res.status(400).json({error: '삭제할 카테고리 아이템이 없습니다.'});
+        }
+
+        // deleteIdsList 배열에 있는 각 faq_id를 사용하여 해당 행의 faq_status를 "취소"로 업데이트합니다.
+        for (const idx of deleteIdxsList) {
+            const deletedResult = await basicModel.deletePost(idx);
+
+            if(!deletedResult){
+                return res.status(503).json({ error: `${idx}번 째 게시글 삭제 실패` });
+            }
+        }
+
+        return res.status(200).json({ message: '게시글이 성공적으로 삭제되었습니다.' });
+    } catch (error) {
+        console.error("Error deleting post:", error);
+        return res.status(500).json({ error: "Failed to delete post" });
+    }
+};
 
 // ... 다른 컨트롤러 함수들 ...
 
