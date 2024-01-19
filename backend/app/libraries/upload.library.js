@@ -19,9 +19,6 @@ const upload = multer({
 router.post(`/${appConfig.apiVersion}/uploads/:directory`, async (req, res) => {
     console.log('통신 왔다')
 
-    const att_target_type = req.body.att_target_type ?? 'ETC';
-    const att_target = req.body.att_target ?? '0';
-
     const directory = element('directory', req.params, '');
     // const upPath = path.posix.join(directory , (new Date()).dateFormat('yyyy') ,(new Date()).dateFormat('MM'))
     const upPath = path.posix.join(directory)
@@ -57,6 +54,8 @@ router.post(`/${appConfig.apiVersion}/uploads/:directory`, async (req, res) => {
 
     // multer 미들웨어 실행
     upload(req, res, async (err) => {
+        const att_target_type = req.body.att_target_type ?? 'ETC';
+        const att_target = req.body.att_target ?? '0';
         if (err) {
             console.error('파일 업로드 중 에러 발생:', err);
             return res.status(500).json({ error: '파일 업로드 실패' });
