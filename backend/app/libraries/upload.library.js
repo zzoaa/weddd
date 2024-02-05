@@ -2,7 +2,7 @@ const path = require("path");
 const md5 = require("md5");
 const multer = require("multer");
 const fs = require("fs");
-const sharp = require("sharp");
+
 
 const router = require('express').Router();
 const randomstring = require('randomstring');
@@ -27,20 +27,20 @@ router.post(`/${appConfig.apiVersion}/uploads/:directory`, async (req, res) => {
     const uploadPath = path.join(root, 'data', 'files', upPath);
 
     // 이미지 리사이즈에 대한 옵션
-    const isResize = element('resize', req.body, false);
-    const resizeWidth = element('resizeWidth', req.body, 0);
-    const resizeHeight = element('resizeHeight', req.body, 0);
+    // const isResize = element('resize', req.body, false);
+    // const resizeWidth = element('resizeWidth', req.body, 0);
+    // const resizeHeight = element('resizeHeight', req.body, 0);
 
-    if (isResize) {
-        // 리사이즈 옵션이 활성화된 경우
-        if (
-            (resizeWidth === 'auto' && resizeHeight === 'auto') ||
-            isNaN(resizeWidth) ||
-            isNaN(resizeHeight)
-        ) {
-            return res.status(400).json({ error: '잘못된 리사이징 옵션입니다.' });
-        }
-    }
+    // if (isResize) {
+    //     // 리사이즈 옵션이 활성화된 경우
+    //     if (
+    //         (resizeWidth === 'auto' && resizeHeight === 'auto') ||
+    //         isNaN(resizeWidth) ||
+    //         isNaN(resizeHeight)
+    //     ) {
+    //         return res.status(400).json({ error: '잘못된 리사이징 옵션입니다.' });
+    //     }
+    // }
 
     try {
         if (!fs.existsSync(uploadPath)) {
@@ -76,24 +76,11 @@ router.post(`/${appConfig.apiVersion}/uploads/:directory`, async (req, res) => {
             }
             let fileUrl = appConfig.apiUrl + path.posix.join(`/${appConfig.apiVersion}`,'/','data','files', upPath, fileName)
 
-            console.log(' fileUrl::' + fileUrl)
-            console.log(' filePath::' + filePath)
-            console.log(' fileName::' + fileName)
+            // console.log(' fileUrl::' + fileUrl)
+            // console.log(' filePath::' + filePath)
+            // console.log(' fileName::' + fileName)
 
             try {
-                let sharpObj = sharp(file.buffer);
-
-                if (isResize) {
-                    if (resizeWidth !== 'auto') {
-                        sharpObj = sharpObj.resize(Number(resizeWidth), null);
-                    }
-
-                    if (resizeHeight !== 'auto') {
-                        sharpObj = sharpObj.resize(null, Number(resizeHeight));
-                    }
-                }
-
-                await sharpObj.toFile(filePath);
                 resultArray.push(fileUrl);
             } catch (err) {
                 console.error('파일 업로드 중 에러 발생:', err);
@@ -142,9 +129,9 @@ uploadSingleFile = async (file, targetPath) => {
         filePath = path.join(uploadPath, fileName);
     }
 
-    let sharpObj = sharp(file.buffer);
-
-    await sharpObj.toFile(filePath);
+    // let sharpObj = sharp(file.buffer);
+    //
+    // await sharpObj.toFile(filePath);
 
     return filePath;
 };
