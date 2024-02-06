@@ -2,10 +2,17 @@ const path = require("path");
 const md5 = require("md5");
 const multer = require("multer");
 const fs = require("fs");
-
+const sharp = require("sharp");
 
 const router = require('express').Router();
 const randomstring = require('randomstring');
+
+
+
+/**
+ * 사용자 파일 업로드
+ */
+
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -30,27 +37,18 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage }).array('files');
 
 router.post(`/${appConfig.apiVersion}/uploads/:directory`, async (req, res) => {
-    console.log('통신 왔다');
-
-    const isResize = element('resize', req.body, false);
-    const resizeWidth = element('resizeWidth', req.body, 0);
-    const resizeHeight = element('resizeHeight', req.body, 0);
-
-    if (isResize) {
-        if (
-            (resizeWidth === 'auto' && resizeHeight === 'auto') ||
-            isNaN(resizeWidth) ||
-            isNaN(resizeHeight)
-        ) {
-            return res.status(400).json({ error: '잘못된 리사이징 옵션입니다.' });
-        }
-    }
-
     upload(req, res, async (err) => {
         if (err) {
             console.error('파일 업로드 중 에러 발생:', err);
             return res.status(500).json({ error: '파일 업로드 실패' });
         }
+        const att_target_type = req.body.att_target_type ?? 'ETC';
+        const att_target = req.body.att_target ?? '0';
+        console.log(req.body)
+        // console.log('11111')
+        // console.log(req.files)
+        // console.log('22222')
+        // console.log(req.att_target);
 
         const directory = element('directory', req.params, '');
         const upPath = path.posix.join(directory);
@@ -63,23 +61,28 @@ router.post(`/${appConfig.apiVersion}/uploads/:directory`, async (req, res) => {
             const filePath = path.join(uploadPath, fileName);
             const fileUrl = appConfig.apiUrl + path.posix.join(`/${appConfig.apiVersion}`, '/data/files', upPath, fileName);
 
-            if (isResize && (resizeWidth !== 'auto' || resizeHeight !== 'auto')) {
-                let sharpObj = sharp(filePath);
-                let resizeOptions = {};
-                if (resizeWidth !== 'auto') resizeOptions.width = Number(resizeWidth);
-                if (resizeHeight !== 'auto') resizeOptions.height = Number(resizeHeight);
-                await sharpObj.resize(resizeOptions).toFile(filePath + '_resized' + path.extname(filePath));
-            }
+
 
             resultArray.push(fileUrl);
 
             // 파일 메타데이터 저장 로직 (예: 데이터베이스에 저장)
-            // ...
+            const fileData = {
+                att_target_type: att_target_type,
+                att_target: att_target,// -> write폼에서 Value로 가져오도록 수정
+                att_origin: originalName,
+                att_filepath: `/data/files/${upPath}/${fileName}`,
+                att_ext: path.extname(originalName).substring(1),  // 확장자 추출
+                att_is_image: 'Y'
+            };
+            const db = database();
+            await db('wb_attach').insert(fileData)
+
         }
 
         return res.json(resultArray);
     });
 });
+
 // Single File Upload
 uploadSingleFile = async (file, targetPath) => {
     const upPath = path.posix.join(targetPath, (new Date()).dateFormat('yyyy'), (new Date()).dateFormat('MM'));
@@ -101,9 +104,9 @@ uploadSingleFile = async (file, targetPath) => {
         filePath = path.join(uploadPath, fileName);
     }
 
-    // let sharpObj = sharp(file.buffer);
-    //
-    // await sharpObj.toFile(filePath);
+    let sharpObj = sharp(file.buffer);
+
+    await sharpObj.toFile(filePath);
 
     return filePath;
 };
