@@ -14,6 +14,7 @@ import OrderRouter from "./OrderRouter.jsx";
 import DashboardChart from "../components/Dashboard/DashboardChart.jsx";
 import CouponRouter from "./CouponRouter.jsx";
 import TipRouter from "./TipRouter.jsx";
+import BoardRouter from "./BoardRouter.jsx";
 
 function AppRouter() {
   return (
@@ -29,6 +30,7 @@ function AppRouter() {
           <Route path='order/*' element={<OrderRouter />}></Route>
           <Route path="setting/*" element={<SettingRouter />}></Route>
           <Route path="tip/*" element={<TipRouter />}></Route>
+          <Route path="board/*" element={<BoardRouter />}></Route>
         </Route>
 
         <Route path="/members/*">
