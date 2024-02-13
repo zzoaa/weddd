@@ -1007,14 +1007,17 @@ CREATE TABLE `wb_menu` (
 
 DROP TABLE IF EXISTS `wb_notice`;
 CREATE TABLE `wb_notice` (
-  `not_id` int(10) NOT NULL AUTO_INCREMENT COMMENT '공지 번호',
-  `not_title` varchar(255) NOT NULL DEFAULT '' COMMENT '공지 글 제목',
-  `not_subtitle` varchar(255) NOT NULL DEFAULT '' COMMENT '공지 글 부제',
-  `not_content` mediumtext DEFAULT NULL COMMENT '공지 글 내용',
-  `not_datetime` date NOT NULL DEFAULT '0000-00-00' COMMENT '등록 시각',
-  `not_status` enum('Y','N','H','T') NOT NULL DEFAULT 'T' COMMENT '상태 Y:등록,N:삭제,T:임시,H:숨김',
-  PRIMARY KEY (`not_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `not_idx` int NOT NULL AUTO_INCREMENT COMMENT '공지 번호',
+  `not_title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '공지 글 제목',
+  `not_subtitle` varchar(255) COLLATE utf8mb4_general_ci DEFAULT '' COMMENT '공지 글 부제',
+  `not_content` mediumtext COLLATE utf8mb4_general_ci COMMENT '공지 글 내용',
+  `thumb_filepath` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL COMMENT '공지 썸네일',
+  `not_datetime` datetime DEFAULT NULL COMMENT '등록 시각',
+  `not_status` enum('Y','N','H','T') COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'T' COMMENT '상태 Y:등록,N:삭제,T:임시,H:숨김',
+  `mem_idx` int NOT NULL DEFAULT '0' COMMENT '등록한 사람 mem_idx',
+  PRIMARY KEY (`not_idx`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+;
 
 
 DROP TABLE IF EXISTS `wb_partner_contact`;

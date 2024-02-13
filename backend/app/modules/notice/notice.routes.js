@@ -1,12 +1,11 @@
 const router = require('express').Router()
 const controller = loadModule('notice', 'controller');
 
-// router.get('/list', controller.getNoticeList);
-router.put('/edit', controller.editPost); //포스트 수정
-router.delete('/del', controller.deletePost);//게시글 삭제하기
-router.get('/posts', controller.getPosts); // 게시글들을 보여줄 경로
+router.get('/list', controller.getPostList);//공지글 목록 조회
+router.get('/post/:not_idx', controller.getPost); //공지글 개별 조회
 router.post('/write', controller.submitPost); //공지 추가
-
+router.put('/edit', controller.editPost); //포스트 수정
+router.put('/delete', controller.deletePost);//게시글 삭제하기
 /**
  * 객체 내보내기
  */
