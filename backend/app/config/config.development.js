@@ -3,6 +3,11 @@ module.exports = {
     appPort: 7999, /*local에서 번호 겹치지 않도록 설정*/
     secretKey: 'wheeparam',
     database: {
+        /*  host, username, password, port는
+            2가지 중 어느 서버 DB 사용하는지 확인하고 필요할 시 변경
+            현재 적힌 것은 1번 서버
+            ⇓
+        */
         host: '115.68.185.124',
         username: 'hagunbiz',
         password: 'gkrns!@#',

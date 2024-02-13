@@ -7,7 +7,7 @@ module.exports = {
         username: 'hagunbiz',
         password: 'gkrns!@#',
         port: 3306,
-        database: 'node_board' /*local에서 사용할 DB명*/
+        database: 'node_board' /*서버에서 사용할 DB명*/
     },
     cors: {
         origin: true,
