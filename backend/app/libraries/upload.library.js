@@ -2,7 +2,6 @@ const path = require("path");
 const md5 = require("md5");
 const multer = require("multer");
 const fs = require("fs");
-const sharp = require("sharp");
 
 const router = require('express').Router();
 const randomstring = require('randomstring');
